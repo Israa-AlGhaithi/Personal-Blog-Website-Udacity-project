@@ -1,0 +1,788 @@
+/* TODO: import css file */
+@import url(header.css);
+@import url(footer.css);
+@import url(mobile-tablet-fonts-queries.css) (min-width: 1400px); /* for font responsive */
+@import url(desktop-media-queries.css) (min-width:901px); /* TODO: if wide enough screen */
+@import url(tablet-media-queries.css) (min-width: 600px) and (max-width:900px); /* TODO: medium screen (tablet) */
+@import url(wide-media-queries.css) (min-max: 1400px); /*TODO:  for wide screen */
+
+
+/*.. body container ..*/
+/*.. TODO: Initially for Small Screen (Mobile) */
+.body-container {
+    display: grid;
+    grid-template-columns: 300px 300px 300px;
+    grid-auto-rows: minmax(100px, auto);
+    grid-template-areas:    "hd"
+                            "sdl"
+                            "main"
+                            "ft";
+    background-color: #ead7c3;
+    gap: 3px;
+}
+
+
+/*.. sidbar section ..*/
+/* sidebar container */
+.sidebar-container {
+    grid-area: sdl;
+    border-right: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: stretch;
+    padding: 30px;
+}
+
+
+/* TODO: nav items container, Accessing links, font aoesome and button : make it like button shape */
+.sidebar-menu > a,
+.sidebar-menu > button {
+    background-color: #fbf6ef;
+    text-align: center;
+    text-decoration: none;
+    padding: 14px;
+    display: inline-block;
+    border-radius: 25px;
+    color: black;
+}
+
+
+/* TODO: nav items container, links, and button when hover */
+.sidebar-menu > a:hover,
+.sidebar-menu > button:hover {
+    background-color: #dce0d9;
+    color: black;
+}
+
+
+/*.. Main Content section ..*/
+/* main content container */
+.main-content {
+    grid-area: main;
+    display: grid;
+    grid-auto-columns: minmax(auto, 300px);
+    grid-auto-rows: minmax(200px, auto);
+    grid-template-areas:    "asider"
+                            "blogtitle"
+                            "mainblog"; /* TODO:  grid one  '.' */
+    gap: 15px;
+}
+
+
+/* blog types title container */
+.blog-types-title {
+    grid-area: blogtitle;
+    order: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    overflow: hidden;
+    text-align: left; /*  */
+    padding: 2px; /*  */
+}
+
+
+/* TODO: bio container */
+.bio-container {
+    order: 1;
+}
+
+
+/* bio style */
+.bio {
+    background-color: #fbf6ef;
+    border-radius: 20px;
+    padding: 3px;
+    color: #ef5b5b;
+    text-shadow: #ef5b5b;
+}
+
+
+/* bio avatar */
+.bio-avatar > a > img {
+    max-width: 20px;
+    border-radius: 50%;
+}
+
+
+/* sub title */
+.blogs-word {
+    order:2;
+}
+
+
+
+/*.. Blog Post section ..*/
+/* blog post container */
+.blog-post-container {
+    box-shadow: 0 2px 4px 0 #ef5b5b;
+    background-color: white;
+    grid-area: mainblog;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 5px;
+    margin: 3px;
+  /*  max-width: 600px;*/
+}
+
+
+/* main title container */
+
+/* TODO: main title of body */
+#post-title{
+    text-align: left;
+    font-family: Copperplate, Papyrus, fantasy;
+}
+
+
+/* TODO: accessing author name and date of publish */
+.post-title-container > span,
+.post-title-container > span > i {
+    color: #b8b8ff;
+    line-height: 9px; /* */
+    text-shadow: #b8b8ff;
+    font-size: small; /* */
+}
+
+/*.. post content section ..*/
+/* post content container */
+.post-content-container {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 5px;
+}
+
+
+/* TODO: make the book info container flex */
+.book-basic-info-container {
+    display: flex;
+    flex-direction: column-reverse; /**/
+    justify-content: space-between;
+    align-items: stretch;
+
+}
+
+
+/* introduction paragrap style */
+.introduction,
+.info,
+.bquote,
+.second-introduction,
+.third-introduction {
+    text-align: justify;
+}
+
+
+/* headings style */
+.sub-heading2,
+.sub-heading3,
+.sub-heading4 {
+    font-family: Arial, sans-serif;
+}
+
+
+/* fun fact style */
+.quotaion {
+    border-left: 3px solid #cdd7d6;
+    background-color: #f1f7ed;
+    line-height: 18px;
+    padding: 3px;
+}
+
+
+/* image style */
+.img-container > img {
+    border-radius: 20px;
+    max-width: 200px;
+    max-height: 300px;
+}
+
+
+/*image caption */
+.img-container > figcaption {
+    color: #7ca982;
+    text-shadow: #243e36;
+}
+
+
+/* older post section */
+/* TODO: older post button  */
+.old-new-post-btn{
+    text-align: center;
+    border: 1px solid #cb997e;
+    background-color: #cb997e;
+    color: white;
+    text-shadow: #cb997e;
+    font-size: 20px;
+    border-radius: 20px;
+}
+
+
+/* TODO:  older post button when hover  */
+.old-new-post-btn:hover {
+    border: 1px solid #cb997e;
+    color: #cb997e;
+    background-color: white;
+    text-shadow: white;
+    cursor: pointer;
+}
+
+/*.. share post section  ..*/
+.share-page-container {
+    align-self: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 2px;
+}
+
+
+/* TODO: accessing font aoesome */
+.share-page-title-container > a > i {
+    color: #7ca982;
+}
+
+/*.. aside subscribe section ..*/
+/* aside container */
+.aside-right-section{
+    grid-area: asider;
+    display: block;
+    padding: 2px 0 0 10px;
+
+    background-color: #c8d5b9;
+    box-shadow: 0 0 2px 2px #faf3dd;
+    border-radius: 20px;
+    text-align: justify;
+}
+
+
+/* subscribe container */
+.subscribe-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: stretch;
+    align-items: center;
+    padding: 5px;
+    color: #fe4a49;
+}
+
+
+/* TODO: subscribe form, accessing input & button */
+#subscribe-form > input[type=text],
+#subscribe-form > input[type=email] {
+    color: black;
+    border: 1px solid #ffa69e;
+}
+
+
+/* TODO: when input holder focus */
+#subscribe-form > input[type=text]:focus,
+#subscribe-form > input[type=email]:focus {
+    border: 1px solid #9bc1bc ;
+    outline: none;
+}
+
+
+/* subscribe form button */
+.subscribe-btn {
+    color: #fe4a49;
+    border: 1px solid #fe4a49;
+    background-color: white;
+    border-radius: 25px;
+    font-size: medium;
+}
+
+
+/* TODO: subscriber form button, when hover change curser  */
+.subscribe-btn:hover {
+    cursor: pointer;
+}
+
+
+/* TODO: for likely as a Tablet */
+@media (min-width: 600px) and (max-width:900px){
+    /*.. body container ..*/
+.body-container {
+    display: grid;
+    grid-template-columns: 300px 300px 300px;
+    grid-auto-rows: minmax(100px, auto);
+    grid-template-areas:    "hd hd hd hd"
+                            "sdl sdl sdl sdl"
+                            "main main main main"
+                            "ft ft ft ft ft ft ft ft";
+    background-color: #ead7c3;
+    gap: 3px;
+}
+
+
+/*.. sidbar section ..*/
+/* sidebar container */
+.sidebar-container {
+    border-bottom: 2px solid #fbf6ef;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: stretch;
+    padding: 30px;
+}
+
+
+/*.. Main Content section ..*/
+/* main content container */
+.main-content {
+    grid-area: main;
+    display: grid;
+    grid-auto-columns: minmax(auto, 300px);
+    grid-auto-rows: minmax(200px, auto);
+    grid-template-areas:   "blogtitle blogtitle . asider"
+                            "mainblog mainblog mainblog .";
+    gap: 15px;
+}
+
+
+/* blog types title container */
+.blog-types-title {
+    grid-area: blogtitle;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    overflow: hidden;
+    text-align: center;
+    padding: 15px;
+}
+
+
+/* TODO: bio container, make it align self */
+.bio-container {
+    align-self: center;
+}
+
+
+/* bio style */
+.bio {
+    background-color: #fbf6ef;
+    border-radius: 20px;
+    padding: 3px;
+    color: #ef5b5b;
+    text-shadow: #ef5b5b;
+}
+
+
+/* bio avatar */
+.bio-avatar > a > img {
+    max-width: 40px; /* */
+    border-radius: 50%;
+}
+
+
+/* sub title */
+.blogs-word {
+    order:2;
+}
+
+
+/* TODO: accessing author name and date of publish */
+.post-title-container > span,
+.post-title-container > span > i {
+    color: #b8b8ff;
+    line-height: 16px; /* */
+    text-shadow: #b8b8ff;
+    font-size: medium; /* */
+}
+
+/*.. post content section ..*/
+/* post content container */
+.post-content-container {
+    display: flex;
+    flex-direction: column; /* */
+    justify-content: flex-start; /* */
+    align-items: flex-start;
+    padding: 2px;
+    min-width: fit-content; /**/
+}
+
+/* TODO: make the book info container flex */
+.book-basic-info-container {
+    display: flex;
+    flex-direction: column-reverse; /**/
+    justify-content: space-between;
+    align-items: stretch;
+
+}
+
+
+/* introduction paragrap style */
+.introduction,
+.info,
+.bquote,
+.second-introduction,
+.third-introduction {
+    text-align: justify;
+}
+
+
+/* headings style */
+.sub-heading2,
+.sub-heading3,
+.sub-heading4 {
+    font-family: Arial, sans-serif;
+}
+
+
+/* fun fact style */
+.quotaion {
+    border-left: 3px solid #cdd7d6;
+    background-color: #f1f7ed;
+    line-height: 18px;
+    padding: 3px;
+}
+
+
+/* image style */
+.img-container > img {
+    border-radius: 20px;
+    max-width: 389px;
+    max-height: 500px;
+}
+
+
+/*image caption */
+.img-container > figcaption {
+    color: #7ca982;
+    text-shadow: #243e36;
+}
+}
+
+
+/* TODO: If screen is wide enough (Laptop & desktop ) */
+@media(min-width: 901px){
+ /*.. body container ..*/
+  /*.. body container ..*/
+.body-container {
+    display: grid;
+    grid-template-columns: 300px 300px 300px;
+    grid-auto-rows: minmax(100px, auto);
+    grid-template-areas:    "hd hd hd hd hd hd hd hd"
+                            "sdl main main main main main main main"
+                            "ft ft ft ft ft ft ft ft";
+    background-color: #ead7c3;
+    gap: 3px;
+}
+
+
+/*.. sidbar section ..*/
+/* sidebar container */
+.sidebar-container {
+    border-right: 2px solid #fbf6ef;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: stretch;
+    padding: 30px;
+}
+
+
+/*.. Main Content section ..*/
+/* main content container */
+.main-content {
+    grid-area: main;
+    display: grid;
+    grid-template-columns: 90px 300px 90px;
+    grid-auto-rows: minmax(200px, auto);
+    grid-template-areas:    "blogtitle blogtitle blogtitle blogtitle blogtitle blogtitle blogtitle asider"
+                            "mainblog mainblog mainblog mainblog mainblog mainblog mainblog  . ";
+    gap: 15px;
+}
+
+
+/* blog types title container */
+.blog-types-title {
+    grid-area: blogtitle;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    overflow: hidden;
+    text-align: center;
+    padding: 15px;
+}
+
+
+/* TODO: bio container, make it align self */
+.bio-container {
+    align-self: center;
+}
+
+
+/* bio avatar */
+.bio-avatar > a > img {
+    width: 33px;
+    border-radius: 50%;
+}
+
+
+/* sub title */
+.blogs-word {
+    align-self: flex-start;
+}
+
+
+/* TODO: change the font size of span in title */
+.sub-title {
+    font-size: larger;
+}
+
+
+/* TODO: accessing author name and date of publish */
+.post-title-container > span,
+.post-title-container > span > i {
+    color: #b8b8ff;
+    line-height: 16px; /* */
+    text-shadow: #b8b8ff;
+    font-size: large; /* */
+}
+
+
+/* main title container */
+
+/* TODO: main title of body */
+#post-title{
+    text-align: center;
+    font-family: Copperplate, Papyrus, fantasy;
+    font-size: 40px;
+}
+
+
+/*.. post content section ..*/
+/* post content container */
+.post-content-container {
+    display: flex;
+    flex-direction: column; /* */
+    justify-content: flex-start; /* */
+    align-items: flex-start;
+    padding: 2px;
+}
+
+
+/* TODO: make the book info container flex */
+.book-basic-info-container {
+    display: flex;
+    flex-direction: row; /**/
+    justify-content: space-between;
+    align-items: stretch;
+
+}
+
+
+/* introduction paragrap style */
+.introduction,
+.info,
+.bquote,
+.second-introduction,
+.third-introduction {
+    text-align: justify;
+}
+
+
+/* headings style */
+.sub-heading2,
+.sub-heading3,
+.sub-heading4 {
+    font-family: Arial, sans-serif;
+}
+
+
+/* fun fact style */
+.quotaion {
+    border-left: 3px solid #cdd7d6;
+    background-color: #f1f7ed;
+    line-height: 18px;
+    padding: 3px;
+}
+
+
+/* image style */
+.img-container > img {
+    border-radius: 20px;
+    max-width: 389px;
+    max-height: 500px;
+}
+
+
+/*image caption */
+.img-container > figcaption {
+    color: #7ca982;
+    text-shadow: #243e36;
+}
+}
+
+
+/* TODO: If screen is wide  */
+@media(min-width: 1400px){
+
+/*.. body container ..*/
+.body-container {
+    display: grid;
+    grid-template-columns: 300px 300px 300px;
+    grid-auto-rows: minmax(100px, auto);
+    grid-template-areas:    "hd hd hd hd hd hd hd hd"
+                            "sdl main main main main main main main "
+                            "ft ft ft ft ft ft ft ft";
+    background-color: #ead7c3;
+    gap: 3px;
+ }
+
+
+/*.. sidbar section ..*/
+/* sidebar container */
+.sidebar-container {
+   border-right: 2px solid #fbf6ef;
+   display: flex;
+   flex-direction: column;
+   justify-content: flex-start;
+   align-items: stretch;
+   padding: 30px;
+}
+
+
+/*.. Main Content section ..*/
+/* main content container */
+.main-content {
+   grid-area: main;
+   display: grid;
+   grid-template-columns: 90px 300px 90px;
+   grid-auto-rows: minmax(200px, auto);
+   grid-template-areas:    "blogtitle blogtitle blogtitle blogtitle blogtitle blogtitle blogtitle blogtitle blogtitle asider asider"
+                           "mainblog mainblog mainblog mainblog mainblog mainblog mainblog mainblog mainblog  . .";
+   gap: 15px;
+}
+
+
+/* blog types title container */
+.blog-types-title {
+   grid-area: blogtitle;
+   display: flex;
+   flex-direction: column;
+   justify-content: flex-start;
+   align-items: flex-start;
+   overflow: hidden;
+   text-align: center;
+   padding: 15px;
+}
+
+
+/* TODO: bio container, make it align self */
+.bio-container {
+   align-self: center;
+}
+
+
+/* bio avatar */
+.bio-avatar > a > img {
+   width: 38px;
+   border-radius: 50%;
+}
+
+
+/* sub title */
+.blogs-word {
+   align-self: flex-start;
+}
+
+
+/* TODO: change the font size of span in title */
+.sub-title {
+   font-size: x-large;
+}
+
+
+/* TODO: accessing author name and date of publish */
+.post-title-container > span,
+.post-title-container > span > i {
+   color: #b8b8ff;
+   line-height: 16px; /* */
+   text-shadow: #b8b8ff;
+   font-size: x-large; /* */
+}
+
+
+/* main title container */
+
+/* TODO: main title of body */
+#post-title{
+   text-align: center;
+   font-family: Copperplate, Papyrus, fantasy;
+   font-size: 45px;
+}
+
+
+/*.. post content section ..*/
+/* post content container */
+.post-content-container {
+   display: flex;
+   flex-direction: column; /* */
+   justify-content: flex-start; /* */
+   align-items: flex-start;
+   padding: 2px;
+}
+
+
+   /* TODO: make the book info container flex */
+   .book-basic-info-container {
+       display: flex;
+       flex-direction: row; /**/
+       justify-content: space-between;
+       align-items: stretch;
+
+   }
+
+
+   /* introduction paragrap style */
+   .introduction,
+   .info,
+   .bquote,
+   .second-introduction,
+   .third-introduction {
+       text-align: justify;
+   }
+
+
+   /* headings style */
+   .sub-heading2,
+   .sub-heading3,
+   .sub-heading4 {
+       font-family: Arial, sans-serif;
+   }
+
+
+   /* fun fact style */
+   .quotaion {
+       border-left: 3px solid #cdd7d6;
+       background-color: #f1f7ed;
+       line-height: 18px;
+       padding: 3px;
+   }
+
+
+   /* image style */
+   .img-container > img {
+       border-radius: 20px;
+       max-width: 389px;
+       max-height: 500px;
+   }
+
+
+   /*image caption */
+   .img-container > figcaption {
+       color: #7ca982;
+       text-shadow: #243e36;
+   }
+}

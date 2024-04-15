@@ -1,0 +1,880 @@
+/* TODO: import css file */
+@import url(header.css);
+@import url(footer.css);
+@import url(mobile-tablet-fonts-queries.css) (min-width: 1400px); /* for font responsive */
+@import url(desktop-media-queries.css) (min-width:901px); /* TODO: if wide enough screen */
+@import url(tablet-media-queries.css) (min-width: 600px) and (max-width:900px); /* TODO: medium screen (tablet) */
+@import url(wide-media-queries.css) (min-max: 1400px); /*TODO:  for wide screen */
+
+/*.. body container ..*/
+/*.. TODO: Initially for Small Screen (Mobile) */
+.body-container {
+    display: grid;
+    grid-auto-columns: minmax(300px, auto);
+    grid-auto-rows: minmax(100px, auto);
+    grid-template-areas:    "hd"
+                            "sdl"
+                            "main"
+                            "ft";
+    background-color: #ead7c3;
+    gap: 3px;
+}
+
+
+/*.. sidbar section ..*/
+/* sidebar container */
+.sidebar-container {
+    grid-area: sdl;
+    border-right: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: stretch;
+    padding: 30px;
+}
+
+
+/* TODO: nav items container, Accessing links, font aoesome and button : make it like button shape */
+.sidebar-menu > a,
+.sidebar-menu > button {
+    background-color: #fbf6ef;
+    text-align: center;
+    text-decoration: none;
+    padding: 14px;
+    display: inline-block;
+    border-radius: 25px;
+    color: black;
+}
+
+
+/* TODO: nav items container, links, and button when hover */
+.sidebar-menu > a:hover,
+.sidebar-menu > button:hover {
+    background-color: #dce0d9;
+    color: black;
+}
+
+
+
+/*.. Main Content section ..*/
+/* main content container */
+.main-content {
+    grid-area: main;
+    display: grid;
+    grid-auto-columns: minmax(auto, 300px);
+    grid-auto-rows: minmax(200px, auto);
+    grid-template-areas:    "asider"
+                            "blogtitle"
+                            "mainblog"; /* TODO:  grid one  '.' */
+    gap: 15px;
+}
+
+
+/* blog types title container */
+.blog-types-title {
+    grid-area: blogtitle;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    overflow: hidden;
+    text-align: left; /*  */
+    padding: 2px; /*  */
+}
+
+/* TODO: bio container, make it align self */
+.bio-container {
+    order: 1;
+}
+
+
+/* bio avatar */
+.bio-avatar > a > img {
+    max-width: 20px;
+    border-radius: 50%;
+}
+
+
+/* bio style */
+.bio {
+    background-color: #fbf6ef;
+    border-radius: 20px;
+    padding: 3px;
+    color: #ef5b5b;
+    text-shadow: #ef5b5b;
+}
+
+/* sub title */
+.blogs-word {
+    order:2;
+}
+
+
+/* TODO: main title of body */
+#homepage-title {
+    text-align: left;
+    font-family: Copperplate, Papyrus, fantasy;
+    font-size: 1.2em; /* */
+}
+
+
+/* Blog types section container */
+.blog-types {
+    grid-area: mainblog;
+    order: 3;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* */
+    justify-content: flex-start; /* */
+    padding: 2px;
+}
+
+
+/* TODO: change the font size of span in title */
+.sub-title {
+    font-size: larger;
+}
+
+
+/* main title container */
+.types-title-container {
+    align-self: flex-start;
+    order: 2;
+}
+
+
+/* TODO: Blog Post Card section */
+/* TODO: ALL Blog Post Card section container */
+.taste-of-blogtype-section {
+    display: grid;  /*TODO: make the blog post section grid*/
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: minmax(50px, auto);
+    grid-template-areas:    "topl"
+                            "bottoml"
+                            "bottomr"
+                            "bottommr"; /* TODO: one grid */
+    gap: 3px;
+    padding: 10px;
+    margin: 4px;
+    background-color: white;
+    box-shadow: 0 4px 3px 0 #cb997e;
+    text-align: center;
+}
+
+
+/* TODO: Code.. article cards , each have their grid area */
+#read-card1 {
+    grid-area: bottoml;
+}
+
+
+#read-card2 {
+    grid-area: bottomr;
+}
+
+
+/* TODO: ALL title container */
+.content-subheading-group {
+    grid-area: topl;
+    display: flex;
+    flex-direction: column; /* TODO: change!!! */
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding:3px 3px 3px 2px;
+    border-radius: 25px;
+    background-color: #cb997e;
+}
+
+
+/* TODO: ALL title container: image */
+.images-icon {
+    float: none; /* TODO: change */
+    border-radius: 50%;
+    width: 90px; /* TODO: change */
+    margin: 0 5px 0 -2x; /* TODO: change */
+}
+
+
+/* TODO: all the heading of the blog types's title */
+.content-subheading-group {
+    color: white;
+    text-shadow: #cb997e;
+}
+
+
+/* TODO: ALL blog post cards container : article */
+.blogtype-blog-post-cards {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: stretch;
+    padding-top: 0;
+    min-width: 230px;
+    max-width: 370px; /* TODO: Responsive boxes: but to control the width from getting in appropriate large size */
+    box-shadow: 0 3px 6px 0 #ddbea9;
+    background-color: #ffe8d6;
+    transition: 0.3s;
+    border-radius: 10px;
+    text-align: justify;
+    text-wrap: wrap;
+    text-align-last: auto;
+}
+
+
+/* TODO: ALL blog post cards container : article when hover */
+.blogtype-blog-post-cards:hover {
+    box-shadow: 0 12px 24px 0 #ddbea9 ;
+}
+
+
+/* article content container */
+.blogtype-card-container {
+    padding: 1px 14px;
+}
+
+
+/* TODO: all article cards's images (group) */
+.image-group {
+    min-height: 150px;
+    max-width: 370px; /* TODO: Responsive image: but to control the width from getting in appropriate large size */
+}
+
+
+/* TODO: all the description header setting color */
+.title-description {
+    color: #cb997e;
+    text-shadow: white;
+}
+
+
+/* TODO: all the date of post setting font size */
+.date-of-post {
+    font-size: 1em;
+    text-decoration: underline;
+}
+
+
+/* TODO: all the emphasis words in paragrah have color */
+.card-text > em,
+.card-text > b {
+    text-shadow: white;
+    color: #ef5b5b;
+    font-size: large;
+}
+
+
+/* TODO: all read more button container style */
+.read-more-btn {
+    text-align: center;
+}
+
+
+/* TODO: ALL read more button container, make it grid area */
+.old-post-group-container {
+    grid-area: bottommr;
+    display: flex;
+    justify-content: center;
+}
+
+
+/* TODO: accessing link of the read more button */
+.read-more-btn > a {
+    text-decoration: none;
+    background-color: #aab2ff;
+    padding: 14px;
+    display: inline-block;
+    border-radius: 25px;
+    color: black;
+}
+
+
+/* TODO: when container or button hover */
+.read-more-btn > a:hover {
+    background-color: #edf6f9;
+}
+
+
+/* TODO: all the old post button container */
+.old-post-group-container {
+    float: none;
+    text-align: left;
+}
+
+
+/* TODO: all the older post button  */
+.old-post-group-btn {
+    text-align: center;
+    border: 1px solid #cb997e;
+    background-color: #cb997e;
+    color: white;
+    text-shadow: #cb997e;
+    font-size: 20px;
+    border-radius: 20px;
+}
+
+
+/* TODO: all the older post button when hover  */
+.old-post-group-btn:hover {
+    border: 1px solid #cb997e;
+    color: #cb997e;
+    background-color: white;
+    text-shadow: white;
+    cursor: pointer;
+}
+
+
+/*.. share post section  ..*/
+.share-page-container {
+    align-self: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 2px;
+}
+
+
+/* TODO: accessing font aoesome */
+.share-page-title-container > a > i {
+    color: #7ca982;
+}
+
+
+/*.. aside subscribe section ..*/
+/* aside container */
+.aside-right-section{
+    grid-area: asider;
+    order: 1;
+    display: block;
+    float: none;
+    padding: 2px 0 0 10px;
+
+    background-color: #c8d5b9;
+    box-shadow: 0 0 2px 2px #faf3dd;
+    border-radius: 20px;
+    text-align: justify;
+}
+
+
+
+/* subscribe container */
+.subscribe-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: stretch;
+    align-items: center;
+    padding: 5px;
+    color: #fe4a49;
+}
+
+
+/* TODO: subscribe form, accessing input & button */
+#subscribe-form > input[type=text],
+#subscribe-form > input[type=email] {
+    color: black;
+    border: 1px solid #ffa69e;
+}
+
+
+/* TODO: when input holder focus */
+#subscribe-form > input[type=text]:focus,
+#subscribe-form > input[type=email]:focus {
+    border: 1px solid #9bc1bc ;
+    outline: none;
+}
+
+
+/* subscribe form button */
+.subscribe-btn {
+    color: #fe4a49;
+    border: 1px solid #fe4a49;
+    background-color: white;
+    border-radius: 25px;
+    font-size: medium;
+}
+
+
+/* TODO: subscriber form button, when hover change curser  */
+.subscribe-btn:hover {
+    cursor: pointer;
+}
+
+
+/* TODO: for likely as a Tablet */
+@media (min-width: 600px) and (max-width: 900px){
+    html{
+        font-size: 1.1em;
+    }
+
+   /*.. body container ..*/
+   .body-container {
+    display: grid;
+    grid-template-columns: 300px 300px 300px;
+    grid-auto-rows: minmax(100px, auto);
+    grid-template-areas:    "hd hd hd"
+                            "sdl sdl sdl"
+                            "main main main"
+                            "ft ft ft";
+    background-color: #ead7c3;
+    gap: 3px;
+}
+
+
+/*.. sidbar section ..*/
+/* sidebar container */
+.sidebar-container {
+    grid-area: sdl;
+    border-bottom: 2px solid #fbf6ef;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: stretch;
+    padding: 30px;
+}
+
+
+/*.. Main Content section ..*/
+/* main content container */
+.main-content {
+    grid-area: main;
+    display: grid;
+    grid-auto-columns: minmax(auto, 300px);
+    grid-auto-rows: minmax(200px, auto);
+    grid-template-areas:   "blogtitle blogtitle asider"
+                            "mainblog mainblog mainblog";
+    gap: 15px;
+}
+
+
+/* blog types title container */
+.blog-types-title {
+    grid-area: blogtitle;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    overflow: hidden;
+    text-align: center;
+    padding: 15px;
+}
+
+
+/* TODO: bio container, make it align self */
+.bio-container {
+    align-self: flex-start;
+    order: 1;
+}
+
+
+/* bio style */
+.bio {
+    background-color: #fbf6ef;
+    border-radius: 20px;
+    padding: 3px;
+    color: #ef5b5b;
+    text-shadow: #ef5b5b;
+}
+
+
+/* bio avatar */
+.bio-avatar > a > img {
+    max-width: 40px; /* */
+    border-radius: 50%;
+}
+
+
+/* sub title */
+.blogs-word {
+    align-self: flex-start;
+
+}
+
+
+/*.. Blog Post section ..*/
+/* blog post container */
+.blog-post-container {
+    box-shadow: 0 2px 4px 0 #ef5b5b;
+    background-color: white;
+    grid-area: mainblog;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: stretch;
+    padding: 5px;
+    margin: 3px;
+}
+
+/* TODO: Blog Post Card section */
+/* TODO: ALL Blog Post Card section container */
+.taste-of-blogtype-section {
+    display: grid;  /*TODO: make the blog post section grid*/
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: minmax(50px, auto);
+    grid-template-areas:    "topl topl  . bottommr"
+                            "bottoml bottoml bottomr bottomr";
+    gap: 4px;
+    padding: 15px;
+    margin: 4px;
+    background-color: white;
+    box-shadow: 0 4px 3px 0 #cb997e;
+    text-align: center;
+}
+
+
+/* TODO: ALL title container */
+.content-subheading-group {
+    grid-area: topl;
+    display: flex;
+    flex-direction: row; /* .*/
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding:3px 3px 3px 2px;
+    border-radius: 25px;
+    background-color: #cb997e;
+}
+
+
+/* TODO: ALL title container: image */
+.images-icon {
+    float: none; /* TODO: change */
+    border-radius: 50%;
+    width: 90px; /* TODO: change */
+    margin: 0 5px 0 -2x; /* TODO: change */
+}
+
+
+/* TODO: all the old post button container */
+.old-post-group-container {
+    float: left;
+    text-align: center;
+}
+
+
+/*.. aside subscribe section ..*/
+/* aside container */
+.aside-right-section{
+    grid-area: asider;
+    display: block;
+    padding: 2px 0 0 10px;
+    background-color: #c8d5b9;
+    box-shadow: 0 0 2px 2px #faf3dd;
+    border-radius: 20px;
+    text-align: justify;
+}
+
+}
+
+
+/* TODO: If screen is wide enough (Laptop & desktop ) */
+@media(min-width: 901px) {
+
+    html{
+        font-size: 1.1em;
+    }
+
+    /*.. body container ..*/
+.body-container {
+   display: grid;
+   grid-template-columns: 300px 300px 300px;
+   grid-auto-rows: minmax(100px, auto);
+   grid-template-areas:    "hd hd hd hd"
+                           "sdl main main main"
+                           "ft ft ft ft";
+   background-color: #ead7c3;
+   gap: 3px;
+}
+
+
+/*.. sidbar section ..*/
+/* sidebar container */
+.sidebar-container {
+    grid-area: sdl;
+   border-right: 2px solid #fbf6ef;
+   display: flex;
+   flex-direction: column;
+   justify-content: flex-start;
+   align-items: stretch;
+   padding: 30px;
+}
+
+
+   /*.. Main Content section ..*/
+   /* main content container */
+   .main-content {
+       grid-area: main;
+       display: grid;
+       grid-auto-columns: minmax(auto, 300px);
+       grid-auto-rows: minmax(200px, auto);
+       grid-template-areas:    "blogtitle blogtitle  .  asider"
+                               "mainblog mainblog mainblog   . ";  /* TODO: leave a grid cell empty using '.' */
+       gap: 15px;
+   }
+
+   /* blog types title container */
+   .blog-types-title {
+       grid-area: blogtitle;
+       display: flex;
+       flex-direction: column;
+       justify-content: flex-start;
+       align-items: flex-start;
+       overflow: hidden;
+       text-align: center;
+       padding: 15px;
+   }
+
+
+   /* TODO: bio container, make it align self */
+   .bio-container {
+       align-self: center;
+   }
+
+   /* bio avatar */
+   .bio-avatar > a > img {
+       max-width: 33px;
+       border-radius: 50%;
+   }
+
+
+   /* sub title */
+   .blogs-word {
+       align-self: flex-start;
+   }
+
+
+  /*.. Blog Post section ..*/
+/* blog post container */
+.blog-post-container {
+   box-shadow: 0 2px 4px 0 #ef5b5b;
+   background-color: white;
+   grid-area: mainblog;
+   display: flex;
+   flex-direction: column;
+   justify-content: flex-start;
+   align-items: flex-start;
+   padding: 5px;
+   margin: 3px;
+}
+
+
+   /* TODO: Blog Post Card section */
+   /* TODO: ALL Blog Post Card section container */
+   .taste-of-blogtype-section {
+       display: grid; /* TODO: make the blog post section grid */
+       grid-template-columns: repeat(3, 1fr);
+       grid-auto-rows: minmax(50px, auto);
+       grid-template-areas:    "topl topl  . bottommr"
+                                "bottoml bottoml bottomr bottomr";
+       gap: 6px;
+       padding: 20px;
+       margin: 4px;
+       background-color: white;
+       box-shadow: 0 4px 3px 0 #cb997e;
+       text-align: center;
+   }
+
+
+   /* TODO: ALL title container */
+   .content-subheading-group {
+       grid-area: topl;
+       display: flex;
+       flex-direction: row;
+       justify-content: flex-start;
+       align-items: flex-start;
+       padding:3px 3px 3px 2px;
+       border-radius: 25px;
+       background-color: #cb997e;
+   }
+
+
+   /* TODO: all the date of post setting font size */
+   .date-of-post {
+       font-size: 1.2em;
+       text-decoration: underline;
+   }
+
+
+   /* TODO: ALL title container: image */
+   .images-icon {
+       float: left;
+       border-radius: 50%;
+       width: 100px;
+       margin: 0 10px 0 -25x;
+   }
+
+   /* TODO: all the old post button container */
+   .old-post-group-container {
+       float: left;
+       text-align: center;
+   }
+
+
+   /*.. aside subscribe section ..*/
+   /* aside container */
+   .aside-right-section{
+       grid-area: asider;
+       display: block;
+       padding: 2px 0 0 10px;
+       background-color: #c8d5b9;
+       box-shadow: 0 0 2px 2px #faf3dd;
+       border-radius: 20px;
+       text-align: justify;
+   }
+
+}
+
+
+/* TODO: If screen is wide  */
+@media(min-width: 1400px){
+
+    html{
+        font-size: 1.2em;
+    }
+
+    /*.. body container ..*/
+    .body-container {
+      display: grid;
+      grid-template-columns: 300px 300px 300px;
+      grid-auto-rows: minmax(100px, auto);
+      grid-template-areas:    "hd hd hd hd hd"
+                              "sdl main main main main "
+                              "ft ft ft ft ft";
+      background-color: #ead7c3;
+      gap: 3px;
+   }
+
+
+  /*.. sidbar section ..*/
+  /* sidebar container */
+  .sidebar-container {
+     border-right: 2px solid #fbf6ef;
+     display: flex;
+     flex-direction: column;
+     justify-content: flex-start;
+     align-items: stretch;
+     padding: 30px;
+  }
+
+
+    /*.. Main Content section ..*/
+    /* main content container */
+    .main-content {
+        grid-area: main;
+        display: grid;
+        grid-auto-columns: minmax(auto, 300px);
+        grid-auto-rows: minmax(200px, auto);
+        grid-template-areas:    "blogtitle  blogtitle blogtitle  .  asider"
+                                "mainblog mainblog mainblog mainblog  . ";  /* TODO: leave a grid cell empty using '.' */
+        gap: 15px;
+    }
+
+    /* blog types title container */
+    .blog-types-title {
+        grid-area: blogtitle;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        overflow: hidden;
+        text-align: center;
+        padding: 15px;
+    }
+
+
+    /* TODO: bio container, make it align self */
+    .bio-container {
+        align-self: center;
+    }
+
+    /* bio avatar */
+    .bio-avatar > a > img {
+        max-width: 33px;
+        border-radius: 50%;
+    }
+
+
+    /* sub title */
+    .blogs-word {
+        align-self: flex-start;
+    }
+
+
+    /*.. Blog Post section ..*/
+/* blog post container */
+.blog-post-container {
+    box-shadow: 0 2px 4px 0 #ef5b5b;
+    background-color: white;
+    grid-area: mainblog;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 5px;
+    margin: 3px;
+}
+
+
+    /* TODO: Blog Post Card section */
+    /* TODO: ALL Blog Post Card section container */
+    .taste-of-blogtype-section {
+        display: grid; /* TODO: make the blog post section grid */
+        grid-template-columns: repeat(4, 1fr);
+        grid-auto-rows: minmax(50px, auto);
+        grid-template-areas:    "topl topl topl topl topl . . . . . ."
+                                "bottoml bottoml bottoml bottomml bottomml bottomml bottommr bottommr bottommr bottomr bottomr";
+        gap: 8px;
+        padding: 20px;
+        margin: 8px;
+        background-color: white;
+        box-shadow: 0 4px 3px 0 #cb997e;
+        text-align: center;
+    }
+
+
+    /* TODO: ALL title container */
+    .content-subheading-group {
+        grid-area: topl;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: flex-start;
+        padding:3px 3px 3px 2px;
+        border-radius: 25px;
+        background-color: #cb997e;
+    }
+
+
+    /* TODO: all the date of post setting font size */
+    .date-of-post {
+        font-size: 1.4em;
+        text-decoration: underline;
+    }
+
+
+    /* TODO: ALL title container: image */
+    .images-icon {
+        float: left;
+        border-radius: 50%;
+        width: 100px;
+        margin: 0 10px 0 -25x;
+    }
+
+    /* TODO: all the old post button container */
+    .old-post-group-container {
+        float: left;
+        text-align: center;
+    }
+
+
+    /*.. aside subscribe section ..*/
+    /* aside container */
+    .aside-right-section{
+        grid-area: asider;
+        display: block;
+        padding: 2px 0 0 10px;
+        background-color: #c8d5b9;
+        box-shadow: 0 0 2px 2px #faf3dd;
+        border-radius: 20px;
+        text-align: justify;
+    }
+
+}

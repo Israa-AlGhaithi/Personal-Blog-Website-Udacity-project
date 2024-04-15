@@ -1,0 +1,615 @@
+/* TODO: import css file */
+@import url(header.css);
+@import url(footer.css);
+@import url(mobile-tablet-fonts-queries.css) (min-width: 1400px); /* for font responsive */
+@import url(desktop-media-queries.css) (min-width:901px); /* TODO: if wide enough screen */
+@import url(tablet-media-queries.css) (min-width: 600px) and (max-width:900px); /* TODO: medium screen (tablet) */
+@import url(wide-media-queries.css) (min-max: 1400px); /*TODO:  for wide screen */
+
+/*.. body container ..*/
+/*.. TODO: if screen wide enough */
+.body-container {
+    display: grid;
+    grid-template-columns: 300px 300px 300px;
+    grid-auto-rows: minmax(100px, auto);
+    grid-template-areas:    "hd"
+                            "sdl"
+                            "main"
+                            "ft";
+    background-color: #ead7c3;
+    gap: 3px;
+}
+
+
+/*.. sidbar section ..*/
+/* sidebar container */
+.sidebar-container {
+    grid-area: sdl;
+    border-bottom: 2px solid #fbf6ef;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: stretch;
+    padding: 30px;
+}
+
+
+/* TODO: nav items container, Accessing links, font aoesome and button : make it like button shape */
+.sidebar-menu > a,
+.sidebar-menu > button {
+    background-color: #fbf6ef;
+    text-align: center;
+    text-decoration: none;
+    padding: 14px;
+    display: inline-block;
+    border-radius: 25px;
+    color: black;
+}
+
+
+/* TODO: nav items container, links, and button when hover */
+.sidebar-menu > a:hover,
+.sidebar-menu > button:hover {
+    background-color: #dce0d9;
+    color: black;
+}
+
+
+/*.. Main Content section ..*/
+/* main content container */
+.main-content {
+    grid-area: main;
+    display: grid;
+    grid-auto-columns: minmax(auto, 300px);
+    grid-auto-rows: minmax(200px, auto);
+    grid-template-areas:    "asider"
+                            "blogtitle"
+                            "mainblog"; /*  */
+    gap: 15px;
+}
+
+
+/* title container */
+.blog-about-title {
+    grid-area: blogtitle;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    overflow: hidden;
+    text-align: left; /**/
+    padding: 15px;
+}
+
+
+/* TODO: bio container, make it align self */
+.bio-container {
+   order: 2;
+}
+
+
+/* bio style */
+.bio {
+    background-color: #fbf6ef;
+    border-radius: 20px;
+    padding: 3px;
+    color: #ef5b5b;
+    text-shadow: #ef5b5b;
+}
+
+
+/* bio avatar */
+.bio-avatar > a > img {
+    width: 18px;
+    border-radius: 50%;
+}
+
+
+/* TODO: change the font size of span in title */
+.sub-title {
+    font-size: medium;
+}
+
+
+/*.. Blog Post section ..*/
+/* blog post container */
+.about-container {
+    box-shadow: 0 2px 4px 0 #ef5b5b;
+    background-color: white;
+    grid-area: mainblog;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 5px;
+    margin: 3px;
+}
+
+
+/* main title container */
+
+/* TODO: main title of body */
+#about-title{
+    text-align: center;
+    font: 50px/1.6 "Brush Script MT", cursive;
+    text-decoration: underline;
+}
+
+
+/* my avatar */
+.avatar {
+    width: 100px;
+    border-radius: 50%;
+}
+
+
+.blogger{
+    color: #2a9d8f;
+    font-family: Copperplate, Papyrus, fantasy;
+}
+
+
+/*.. post content section ..*/
+/* post content container */
+.about-content-container {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+}
+
+
+/* introduction paragrap style */
+.introduction {
+    text-align: justify;
+    font-weight: 400px;
+    line-height: 1.8;
+}
+
+
+/* heading */
+.social {
+    color: #ef5b5b;
+    text-decoration: underline;
+}
+
+
+/* social */
+.my-social-container {
+    align-self: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: stretch;
+    padding: 5px;
+}
+
+
+/* link */
+.my-social-container > a {
+    text-decoration: none;
+    color: #7d4f50;
+}
+
+
+/* font awesome for social */
+.my-social-container > a > i {
+    color: #7d4f50;
+}
+
+
+/* contact button */
+.contact-btn {
+    text-align: center;
+    border: none;
+    color: white;
+    background-color: #7d4f50;
+    cursor: pointer;
+    width: 110px;
+    font-size: 16px;
+}
+
+
+/*.. share post section  ..*/
+.share-page-container {
+    align-self: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 2px;
+}
+
+
+/* TODO: accessing font aoesome */
+.share-page-title-container > a > i {
+    color: #7ca982;
+}
+
+/*.. aside subscribe section ..*/
+/* aside container */
+.aside-right-section{
+    grid-area: asider;
+    display: block;
+    padding: 2px 0 0 10px;
+
+    background-color: #c8d5b9;
+    box-shadow: 0 0 2px 2px #faf3dd;
+    border-radius: 20px;
+    text-align: justify;
+}
+
+
+/* subscribe container */
+.subscribe-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: stretch;
+    align-items: center;
+    padding: 5px;
+    color: #fe4a49;
+}
+
+
+/* TODO: subscribe form, accessing input & button */
+#subscribe-form > input[type=text],
+#subscribe-form > input[type=email] {
+    color: black;
+    border: 1px solid #ffa69e;
+}
+
+
+/* TODO: when input holder focus */
+#subscribe-form > input[type=text]:focus,
+#subscribe-form > input[type=email]:focus {
+    border: 1px solid #9bc1bc ;
+    outline: none;
+}
+
+
+/* subscribe form button */
+.subscribe-btn {
+    color: #fe4a49;
+    border: 1px solid #fe4a49;
+    background-color: white;
+    border-radius: 25px;
+    font-size: medium;
+}
+
+
+/* TODO: subscriber form button, when hover change curser  */
+.subscribe-btn:hover {
+    cursor: pointer;
+}
+
+/* TODO: for likely as a Tablet */
+@media (min-width: 600px) and (max-width:900px){
+
+    html {
+        font-size: 1.4em;
+    }
+
+    /*.. body container ..*/
+.body-container {
+    display: grid;
+    grid-template-columns: 300px 300px 300px;
+    grid-auto-rows: minmax(100px, auto);
+    grid-template-areas:    "hd hd hd hd"
+                            "sdl main main main"
+                            "ft ft ft ft"; /**/
+    background-color: #ead7c3;
+    gap: 3px;
+}
+
+
+/*.. sidbar section ..*/
+/* sidebar container */
+.sidebar-container {
+    grid-area: sdl;
+    border-right: 2px solid #fbf6ef;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: stretch;
+    padding: 30px;
+}
+
+
+/* TODO: nav items container, Accessing links, font aoesome and button : make it like button shape */
+.sidebar-menu > a,
+.sidebar-menu > button {
+    background-color: #fbf6ef;
+    text-align: center;
+    text-decoration: none;
+    padding: 14px;
+    display: inline-block;
+    border-radius: 25px;
+    color: black;
+}
+
+
+/* TODO: nav items container, links, and button when hover */
+.sidebar-menu > a:hover,
+.sidebar-menu > button:hover {
+    background-color: #dce0d9;
+    color: black;
+}
+
+
+
+/*.. Main Content section ..*/
+/* main content container */
+.main-content {
+    grid-area: main;
+    display: grid;
+    grid-auto-columns: minmax(auto, 300px);
+    grid-auto-rows: minmax(200px, auto);
+    grid-template-areas:   "blogtitle blogtitle . asider"
+                            "mainblog mainblog maimnblog  .";
+    gap: 15px;
+}
+
+
+/* blog types title container */
+/* title container */
+.blog-about-title {
+    grid-area: blogtitle;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    overflow: hidden;
+    text-align: center;
+    padding: 15px;
+}
+
+
+/*.. Blog Post section ..*/
+/* blog post container */
+.about-container {
+    align-items: center;
+
+
+}
+
+/* TODO: bio container, make it align self */
+.bio-container {
+    align-self: center;
+    font-size: 1.1em;
+}
+
+
+/* bio avatar */
+.bio-avatar > a > img {
+    max-width: 40px; /* */
+    border-radius: 50%;
+}
+
+
+/* subscribe form font icon */
+#subscribe-form > label > i{
+    font-size: 1.4em;
+}
+
+
+/* subscribe form button */
+.subscribe-btn {
+    font-size: 1.1em;
+}
+
+/* contact button */
+.contact-btn {
+    font-size: 21.3px;
+}
+}
+
+
+/* TODO: If screen is wide enough (Laptop & desktop ) */
+@media(min-width: 901px){
+
+    html {
+        font-size: 1.1em;
+    }
+
+    /*.. body container ..*/
+.body-container {
+    display: grid;
+    grid-template-columns: 300px 300px 300px;
+    grid-auto-rows: minmax(100px, auto);
+    grid-template-areas:    "hd hd hd hd hd hd hd hd"
+                            "sdl main main main main main main main"
+                            "ft ft ft ft ft ft ft ft";
+    background-color: #ead7c3;
+    gap: 3px;
+}
+
+
+/*.. sidbar section ..*/
+/* sidebar container */
+.sidebar-container {
+    grid-area: sdl;
+    border-right: 2px solid #fbf6ef;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: stretch;
+    padding: 30px;
+}
+
+
+/*.. Main Content section ..*/
+/* main content container */
+.main-content {
+    grid-area: main;
+    display: grid;
+    grid-auto-columns: minmax(auto, 300px);
+    grid-auto-rows: minmax(200px, auto);
+    grid-template-areas:    "blogtitle blogtitle blogtitle blogtitle blogtitle blogtitle blogtitle asider"
+                            "mainblog mainblog mainblog mainblog mainblog mainblog mainblog  . ";
+    gap: 15px;
+}
+
+
+/* blog types title container */
+/* title container */
+.blog-about-title {
+    grid-area: blogtitle;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    overflow: hidden;
+    text-align: center;
+    padding: 15px;
+}
+
+
+/*.. Blog Post section ..*/
+/* blog post container */
+.about-container {
+    box-shadow: 0 2px 4px 0 #ef5b5b;
+    background-color: white;
+    grid-area: mainblog;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 5px;
+    margin: 3px;
+}
+
+
+/*.. Blog Post section ..*/
+/* blog post container */
+.about-container {
+    align-items: center;
+}
+
+/* TODO: bio container, make it align self */
+.bio-container {
+    align-self: center;
+    font-size: 1.1em;
+}
+
+
+/* bio avatar */
+.bio-avatar > a > img {
+    max-width: 40px; /* */
+    border-radius: 50%;
+}
+
+
+/* subscribe form font icon */
+#subscribe-form > label > i{
+    font-size: 1.4em;
+}
+
+
+/* subscribe form button */
+.subscribe-btn {
+    font-size: 1.1em;
+}
+
+/* contact button */
+.contact-btn {
+    font-size: 21.3px;
+}
+}
+
+
+/* TODO: If screen is wide  */
+@media(min-width: 1400px){
+
+    html {
+        font-size: 1.3em;
+    }
+
+
+    .body-container {
+        display: grid;
+        grid-template-columns: 300px 300px 300px;
+        grid-auto-rows: minmax(100px, auto);
+        grid-template-areas:    "hd hd hd hd hd hd hd hd"
+                                "sdl main main main main main main main"
+                                "ft ft ft ft ft ft ft ft";
+        background-color: #ead7c3;
+        gap: 3px;
+    }
+
+
+  /*.. sidbar section ..*/
+  /* sidebar container */
+  .sidebar-container {
+    grid-area: sdl;
+     border-right: 2px solid #fbf6ef;
+     display: flex;
+     flex-direction: column;
+     justify-content: flex-start;
+     align-items: stretch;
+     padding: 30px;
+  }
+
+
+  /*.. Main Content section ..*/
+  /* main content container */
+  .main-content {
+     grid-area: main;
+     display: grid;
+     grid-template-columns: 90px 300px 90px;
+     grid-auto-rows: minmax(200px, auto);
+     grid-template-areas:    "blogtitle blogtitle blogtitle blogtitle blogtitle blogtitle blogtitle blogtitle blogtitle asider asider"
+                             "mainblog mainblog mainblog mainblog mainblog mainblog mainblog mainblog mainblog  . .";
+     gap: 15px;
+  }
+
+
+    /* blog types title container */
+    .blog-types-title {
+        grid-area: blogtitle;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        overflow: hidden;
+        text-align: center;
+        padding: 15px;
+    }
+
+
+    /* TODO: bio container, make it align self */
+    .bio-container {
+        align-self: center;
+        font-size: 1.1em;
+    }
+
+
+    /* bio avatar */
+    .bio-avatar > a > img {
+        max-width: 40px; /* */
+        border-radius: 50%;
+    }
+
+
+    /* sub title */
+    .blogs-word {
+        order:2;
+    }
+
+    /* subscribe form font icon */
+    #subscribe-form > label > i{
+        font-size: 1.5em;
+    }
+
+
+    /* subscribe form button */
+    .subscribe-btn {
+        font-size: 1.1em;
+    }
+
+    /* contact button */
+    .contact-btn {
+        font-size: 21.3px;
+    }
+    }
+

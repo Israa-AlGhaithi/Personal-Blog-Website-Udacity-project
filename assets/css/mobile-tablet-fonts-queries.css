@@ -1,0 +1,31 @@
+/* TODO: Initially for Small Screen (Mobile) */
+@media (min-width: 1400px) {
+
+/* TODO: change the font size of span in title */
+.sub-title {
+    font-size: 3vw; /* */
+}
+
+
+/* TODO: main title of body */
+#post-title{
+    font-size: 5vw; /* */
+}
+
+/*.. post content section ..*/
+/* post content container */
+.post-content-container {
+    font-size: 1.9vw; /* */
+}
+
+
+.all-text-container,
+h2,
+h3,
+h4 { /* */
+    padding: auto;
+    font-size: 2.9vw;
+    min-width : 2vw;
+}
+
+}

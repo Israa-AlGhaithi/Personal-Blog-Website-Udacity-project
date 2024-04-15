@@ -1,0 +1,141 @@
+/* TODO: for wider screen than desktop */
+@media screen and(min-width:1400px){
+
+    /*.. body container ..*/
+    .body-container {
+        display: grid;
+        grid-auto-columns: minmax(auto, 300px);
+        grid-auto-rows: minmax(100px, auto);
+        grid-template-areas:    "hd hd hd hd hd hd hd hd hd hd hd"
+                                "main main main main main main main main main main main"
+                                "ft ft ft ft ft ft ft ft ft ft ft";
+        background-color: #ead7c3;
+        gap: 12px;
+    }
+
+    html{
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        p,
+        span {
+            font-size: 1.3em;
+        }
+    }
+
+
+    /*.. Header ..*/
+    .header {
+        grid-area: hd;
+        display: grid;
+        grid-template-columns: 90px 300px 90px;
+        grid-template-rows: 200px 100px;
+        grid-template-areas:    "bottom bottom bottom bottom bottom bottom bottom bottom bottom bottom bottom"
+                                "topl topl topm topm topm topm topm topm topr topr topr";
+        gap: 12px;
+        border-bottom: 2px solid #fbf6ef;
+    }
+
+    /* Social media in header section */
+    .social-media-links {
+        padding: 2px;
+        margin: 5px;
+        max-width: 30px; /* */
+        border-left: 3px solid black;
+        text-align: center;
+        grid-area: topl;
+        display: flex; /* TODO: display social media container's element flex */
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+
+    /* Blog Logo */
+    /* logo container */
+    .logo-container {
+        float: left;
+        grid-area: bottom;
+        display: flex; /* TODO: set it flex to align the logo on it */
+        justify-content: center;
+        align-items: center;
+    }
+
+
+    /* Navbar */
+    /* nav container */
+    .navbar {
+        overflow: hidden;
+        display: flex; /* TODO: layout navigation item with flex */
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
+        grid-area: topm;
+    }
+
+
+    /* nav items container */
+    .navi {
+        overflow: hidden;
+    }
+
+    /* TODO: nav items container, Accessing links */
+    .navi > a {
+        float: left;
+    }
+
+    /* nav items container */
+    .navi {
+        float: none; /* TODO: none */
+    }
+
+
+    /* dropdown menu button */
+.blog-dropdown-menu-btn {
+    font-size: 1.3em;
+}
+
+
+    /* Search bar container*/
+    .search-bar {
+        float: left;
+        overflow: hidden;
+        padding: 13px;
+        grid-area: topr;
+        display: flex; /* TODO: display search bar container's element flex */
+        flex-direction: row;
+        justify-content: flex-end;
+        align-items: center;
+    }
+
+
+    /*search bar form */
+    .search-form {
+        margin: 30px;
+    }
+
+
+
+/*.. Footer section ..*/
+.footer {
+    grid-area: ft;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-top: 2px solid #fbf6ef;
+}
+
+
+/* copyright container */
+.copyright-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.3em;
+}
+
+}
