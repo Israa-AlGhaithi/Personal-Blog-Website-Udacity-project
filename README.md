@@ -3,6 +3,7 @@
 ## Table of Content
 
 - [Description](#description)
+- [Website Preview](#website-preview)
 - [Technologies](#technologies)
 - [Usage](#usage)
 - [Development](#development)
@@ -22,6 +23,22 @@ This project is a personal blog website built from scratch using HTML and CSS. I
 - Integration of interactive features and animations using CSS.
 - Cross-browser compatibility and smooth performance.
 - use Flexbox and Grid to easily create a layout.
+
+## Website Preview
+
+[Back to top](#table-of-content)
+
+![Home Page Header Image](homePage.png "Home Page Header of the Website")
+
+***
+
+![Blog Posts Cards and Footer Image](postblog-&-footer.png "Blog Posts Cards and the Footer")
+
+***
+
+![Blog Post Page Image](post.png "Blog Post Page View")
+
+***
 
 ## Technologies
 
